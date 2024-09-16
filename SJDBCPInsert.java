@@ -50,6 +50,9 @@ public class SJDBCPInsert
            String insertquery = "INSERT INTO Employee VALUES(5, 'Jack', 65000, '202 Maple St', 5)";
            int output = stmt.executeUpdate(insertquery);
            System.out.println(output);
+         //Step 5: Close connection
+       // System.out.println("Connection closed");
+        //con.close();
         } catch (ClassNotFoundException e) {
         } catch (SQLException e) {
             e.printStackTrace();
