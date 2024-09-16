@@ -13,7 +13,7 @@ public class SJDBCPInsert
             //step 2: Open DB connection
         String URL = "jdbc:oracle:thin:@localhost:1522:xe";
         String USER = "system";
-        String PASSWORD = "ramz0dbt2orac";
+        String PASSWORD = "********";
          con = DriverManager.getConnection(URL,USER,PASSWORD);
             if(con==null){
                 System.out.println("Connection Unsuccessful");
@@ -48,11 +48,12 @@ public class SJDBCPInsert
            //String insertquery = "INSERT INTO Employee VALUES(3, 'Jim', 55000, '789 Oak St', 3)";
            //String insertquery = "INSERT INTO Employee VALUES(4, 'Jill', 70000, '101 Pine St', 4)";
            String insertquery = "INSERT INTO Employee VALUES(5, 'Jack', 65000, '202 Maple St', 5)";
+         
            int output = stmt.executeUpdate(insertquery);
            System.out.println(output);
          //Step 5: Close connection
-       // System.out.println("Connection closed");
-        //con.close();
+          System.out.println("Connection closed");
+          con.close();
         } catch (ClassNotFoundException e) {
         } catch (SQLException e) {
             e.printStackTrace();
