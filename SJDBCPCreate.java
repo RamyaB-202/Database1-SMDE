@@ -28,6 +28,9 @@ public class SJDBCPCreate
            String createquery = "CREATE TABLE Employee (Eid INT PRIMARY KEY,Ename VARCHAR(50),Salary DECIMAL(10, 2),Address VARCHAR(100),Did INT,FOREIGN KEY (Did) REFERENCES Department(Did))";
             int output = stmt.executeUpdate(createquery);
             System.out.println(output);
+         //Step 5: Close connection
+       // System.out.println("Connection closed");
+        //con.close();
         } catch (ClassNotFoundException e) {
         } catch (SQLException e) {
             e.printStackTrace();
