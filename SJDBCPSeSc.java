@@ -13,7 +13,7 @@ public class SJDBCPSeSc
             //step 2: Open DB connection
         String URL = "jdbc:oracle:thin:@localhost:1522:xe";
         String USER = "system";
-        String PASSWORD = "ramz0dbt2orac";
+        String PASSWORD = "********";
          con = DriverManager.getConnection(URL,USER,PASSWORD);
             if(con==null){
                 System.out.println("Connection Unsuccessful");
@@ -21,6 +21,7 @@ public class SJDBCPSeSc
                 System.out.println("Connection Successful");
             }
             Statement stmt = con.createStatement();
+         
             // Student1 table
             // String selectquery = "select * from Student1";
             // ResultSet rsS = stmt.executeQuery(selectquery);
@@ -28,6 +29,7 @@ public class SJDBCPSeSc
             //     System.out.println(rsS.getInt(1) + " " + rsS.getString(2) + " " + rsS.getInt(3));
             //     System.out.println(rsS.getInt("studentid") + " " + rsS.getString("name") + " " + rsS.getInt("age"));
             // }
+         
             // Marks table
             // String selectquery = "select * from Marks";
             // ResultSet rsM = stmt.executeQuery(selectquery);
@@ -35,6 +37,7 @@ public class SJDBCPSeSc
             //     System.out.println(rsM.getInt(1) + " " + rsM.getInt(2) + " " + rsM.getString(3) + " " + rsM.getInt(4));
             //     System.out.println(rsM.getInt("markid") + " " + rsM.getInt("studentid") + " " + rsM.getString("subject")+ " " + rsM.getInt("marks"));
             // }
+         
             // Department table
             // String selectquery = "select * from Department";
             // ResultSet rsD = stmt.executeQuery(selectquery);
@@ -42,6 +45,7 @@ public class SJDBCPSeSc
             //     System.out.println(rsD.getInt(1) + " " + rsD.getString(2) );
             //     System.out.println(rsD.getInt("did") + " " + rsD.getString("dname"));
             // }
+         
             // Employee table
             String selectquery = "select * from Employee";
             ResultSet rs = stmt.executeQuery(selectquery);
@@ -52,9 +56,10 @@ public class SJDBCPSeSc
             
             //int outputS = stmt.executeUpdate(selectquery);
             //System.out.println(outputS);
+         
          //Step 5: Close connection
-       // System.out.println("Connection closed");
-        //con.close();
+          System.out.println("Connection closed");
+          con.close();
         } catch (ClassNotFoundException e) {
         } catch (SQLException e) {
             e.printStackTrace();
