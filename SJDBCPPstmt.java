@@ -14,7 +14,7 @@ public class SJDBCPPstmt
             //step 2: Open DB connection
         String URL = "jdbc:oracle:thin:@localhost:1522:xe";
         String USER = "system";
-        String PASSWORD = "ramz0dbt2orac";
+        String PASSWORD = "********";
          con = DriverManager.getConnection(URL,USER,PASSWORD);
             if(con==null){
                 System.out.println("Connection Unsuccessful");
@@ -57,8 +57,8 @@ public class SJDBCPPstmt
         System.out.println(r);
 
          //Step 5: Close connection
-       // System.out.println("Connection closed");
-        //con.close();
+          System.out.println("Connection closed");
+          con.close();
         } catch (ClassNotFoundException e) {
         } catch (SQLException e) {
             e.printStackTrace();
