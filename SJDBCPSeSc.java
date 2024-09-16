@@ -52,6 +52,9 @@ public class SJDBCPSeSc
             
             //int outputS = stmt.executeUpdate(selectquery);
             //System.out.println(outputS);
+         //Step 5: Close connection
+       // System.out.println("Connection closed");
+        //con.close();
         } catch (ClassNotFoundException e) {
         } catch (SQLException e) {
             e.printStackTrace();
