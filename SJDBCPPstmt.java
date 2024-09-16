@@ -56,6 +56,9 @@ public class SJDBCPPstmt
         int r = pstmtE.executeUpdate();
         System.out.println(r);
 
+         //Step 5: Close connection
+       // System.out.println("Connection closed");
+        //con.close();
         } catch (ClassNotFoundException e) {
         } catch (SQLException e) {
             e.printStackTrace();
